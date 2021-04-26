@@ -81,10 +81,15 @@
   "build": {
     "appId": "桌面应用",
     "mac": {
-      "category": "public.app-category.video"
+      "category": "public.app-category.video",
+      "icon": "./static/fail/favicon.ico"
     },
     "win": {
-      "target": "portable"
+      "target": "portable",
+      "icon": "./static/fail/favicon.ico"
+    },
+    "linux": {
+      "icon": "./static/fail/favicon.ico"
     },
     "directories": {
       "output": "packages"

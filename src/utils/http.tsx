@@ -1,5 +1,7 @@
 // 请求的url
 const common_url = 'https://yines-liang-dream.vercel.app' 
+// const common_url = 'http://106.75.189.207:8084/api/v1' 
+// const common_url = '/' 
 const header = {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Cache-Control': 'no-cache'

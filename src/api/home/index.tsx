@@ -9,8 +9,8 @@ function to (promise: any) {
 }
 
 const httpApi = {
-  // login请求
-  async login (params: any) {
+  // banner请求
+  async banner(params: any) {
     const url = '/banner'
     const [err, res] = await to(http.get(url, params))
     if (err) {
@@ -27,25 +27,39 @@ const httpApi = {
     // 请求成功
     return res
   },
-  // logout 请求
-//   async logout (params: any) {
-//     const url = '/userManage/logout'
-//     const [err, res] = await to(http.get(url, params))
-//     if (err) {
-//       return Object.assign(
-//         err,
-//         {
-//           status: '406',
-//           description: err.errMsg,
-//         },
-//         true
-//       )
-//     }
-//     return res
-//   },
+  // personalized 请求
+  async getRecommendPlay(params: any) {
+    const url = '/personalized'
+    const [err, res] = await to(http.get(url, params))
+    if (err) {
+      return Object.assign(
+        err,
+        {
+          status: '406',
+          description: err.errMsg,
+        },
+        true
+      )
+    }
+    return res
+  },
+  // async examineTbAccount (params: any) {
+  //   const url = '/examine/tbAccount'
+  //   const [err, res] = await to(http.post(url, params))
+  //   if (err) {
+  //     return Object.assign(
+  //       err,
+  //       {
+  //         status: '406',
+  //         description: err.errMsg
+  //       },
+  //       true
+  //     )
+  //   }
+  //   return res
+  // }
+
   // 其他业务请求.....
 }
-
-
 
 export default httpApi
